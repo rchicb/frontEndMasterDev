@@ -1,0 +1,37 @@
+
+<div class="form-control">
+    <input type="text" [(ngModel)]="key" placeholder="key"/>
+    <textarea placeholder="Share secret" [(ngModel)]="sharesecret"></textarea>
+    <button mat-raised-button class="btn btn-primary" color="primary" (click)="getCredential()">Gererar credenciales</button>
+</div>
+
+<pre>{{data |json}}</pre>
+
+
+<div>
+    <input type="text" [(ngModel)]="postMessage" placeholder="Message"/>
+    <textarea placeholder="Tags" [(ngModel)]="postTags"></textarea>
+    <textarea placeholder="X-Signature" [(ngModel)]="postXSignature"></textarea>
+    <button mat-raised-button color="primary" (click)="addMessage()">Ingresar nuevo mensaje</button>
+</div>
+
+<pre>{{postData |json}}</pre>
+
+<div>
+    <input type="text" [(ngModel)]="getId" placeholder="Id"/>
+    <textarea placeholder="X-Signature" [(ngModel)]="getIdSignature"></textarea>
+    <button mat-raised-button color="primary" (click)="getMessageId()">buscar mensaje por su Id</button>
+</div>
+
+<pre>{{getIdData |json}}</pre>
+
+<div>
+    <input type="text" [(ngModel)]="getTag" placeholder="Ingrese el tag a buscar"/>
+    <textarea placeholder="X-Signature" [(ngModel)]="getTagSignature"></textarea>
+    <button mat-raised-button color="primary" (click)="getMessageTag()">Buscar mensaje por su Tag</button>
+</div>
+
+<pre>{{getTagData |json}}</pre>
+
+
+  
